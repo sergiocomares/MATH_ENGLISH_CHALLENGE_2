@@ -4,7 +4,7 @@
 // These are the SA1 deployments; keep them unchanged until separate SA2 endpoints are provided.
 const scriptsProfesores = {
   "sergiojodral": "https://script.google.com/macros/s/AKfycbwyWWo53MOmjRSNhNoH2hh0FJB3Ge_T7NN43VAsLXdf53JXsYw9QnyXfIQa7be7vTlG/exec",
-  "israeladamuz": "https://script.google.com/macros/s/AKfycbxJf4nyOdlPUY6f-aVgIeUxQtRNm7RFX28JgFtyO49_FbrjZ2nkydhakQu0sHIHbEBD/exec"
+  "israeladamuz": "https://script.google.com/macros/s/AKfycbytQUFcs9p5ScIBastaFxd6cmgcdfiWmiDV8kMIGO1CgUisfUKVSbe7LsV_FgnR7Zfy/exec"
 };
 
 const parametrosURL = new URLSearchParams(window.location.search);
