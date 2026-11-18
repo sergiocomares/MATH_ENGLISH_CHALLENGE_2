@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MATH CHALLENGE 2 – SA2: RECYCLING, an English mathematics vocabulary challenge for 2.º ESO.">
+  <title>MATH CHALLENGE 2 – SA2: RECYCLING</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="welcome-screen" class="screen welcome-screen" aria-labelledby="app-title">
+      <div class="math-ribbon" aria-hidden="true">♻ &nbsp; π &nbsp; √ &nbsp; + &nbsp; − &nbsp; × &nbsp; ÷ &nbsp; % &nbsp; ◇ &nbsp; □</div>
+      <div class="welcome-card">
+        <p class="eyebrow">ENGLISH + MATHEMATICS · 2.º ESO</p>
+        <h1 id="app-title">MATH <span>CHALLENGE 2</span></h1>
+        <p class="tagline">SA2: RECYCLING · The Language of Mathematics</p>
+        <ul class="topic-list" aria-label="Challenge blocks">
+          <li>Proportionality and Percentages</li>
+          <li>Decimal Numbers</li>
+          <li>Geometric Solids</li>
+        </ul>
+        <form id="start-form" novalidate>
+          <label for="student-name">Student PIN <span aria-hidden="true">*</span></label>
+          <input id="student-name" name="studentPin" type="password" inputmode="numeric" autocomplete="off" maxlength="20" required placeholder="Enter your personal PIN" aria-describedby="name-error">
+          <p id="name-error" class="form-error" role="alert" hidden>Enter a valid PIN to start.</p>
+          <button class="primary-button start-button" type="submit">START CHALLENGE <span aria-hidden="true">🚀</span></button>
+        </form>
+        <p class="welcome-note">30 varied challenges · 5 levels · Instant feedback · Recycling-themed maths</p>
+        <p class="creator-credit">Created by Israel Adamuz Almirón and Sergio Jodral Estepa, Mathematics teachers at IES Marqués de Comares.</p>
+      </div>
+    </section>
+
+    <section id="level-screen" class="screen level-screen" hidden aria-labelledby="level-title">
+      <div class="level-map" aria-label="Challenge level map">
+        <p id="level-kicker" class="eyebrow">LEVEL 1 OF 5</p>
+        <div id="level-orb" class="level-orb" aria-hidden="true">1</div>
+        <h2 id="level-title">Warm Up</h2>
+        <p id="level-description">Build confidence with essential mathematical vocabulary.</p>
+        <div id="level-map-list" class="level-map-list"></div>
+        <button id="begin-level-button" class="primary-button" type="button">BEGIN LEVEL</button>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen game-screen" hidden aria-live="polite">
+      <header class="game-header">
+        <div class="identity"><span class="identity-label">STUDENT</span><strong id="header-student">Student</strong></div>
+        <div class="question-counter"><span id="level-live-label">LEVEL 1</span>        <strong>CHALLENGE <span id="question-number">1</span> / <span id="challenge-total">30</span></strong></div>
+        <div class="live-stats" aria-label="Current score">
+          <span class="correct-stat">✓ <b id="live-correct">0</b></span>
+          <span class="incorrect-stat">✗ <b id="live-incorrect">0</b></span>
+          <span class="streak-stat">🔥 <b id="live-streak">0</b> STREAK</span>
+          <span id="lives" class="lives" aria-label="Three lives">❤️ ❤️ ❤️</span>
+        </div>
+      </header>
+      <div class="progress-track" aria-label="Progress through the challenge"><div id="progress-bar" class="progress-bar"></div></div>
+      <article class="question-card" aria-labelledby="question-text">
+        <p id="category-label" class="category-label">Proportionality and Percentages</p>
+        <h2 id="question-text">Question</h2>
+        <div id="options" class="options" role="group" aria-label="Answer options"></div>
+        <div id="feedback" class="feedback" role="status" aria-live="assertive" hidden></div>
+        <p class="keyboard-hint">Choose an answer with a click, or use Tab and Enter.</p>
+      </article>
+    </section>
+
+    <section id="result-screen" class="screen result-screen" hidden>
+      <div id="confetti" class="confetti-layer" aria-hidden="true"></div>
+      <article id="result-card" class="result-card" aria-labelledby="result-title">
+        <header class="result-heading">
+          <p class="eyebrow">COMPLETED CHALLENGE</p>
+          <h1 id="result-title">MATH <span>CHALLENGE 2</span> · SA2: RECYCLING</h1>
+        </header>
+        <div class="student-details">
+          <div><span>STUDENT</span><strong id="result-student"></strong></div>
+          <div><span>CLASS</span><strong id="result-class"></strong></div>
+          <div><span>DATE</span><strong id="result-date"></strong></div>
+        </div>
+        <section class="score-panel" aria-label="Final score">
+          <p>FINAL SCORE</p>
+          <div class="main-score"><strong id="final-correct">0</strong><span>/ <span id="final-total">30</span></span></div>
+          <div id="final-percentage" class="final-percentage">0%</div>
+          <div class="score-summary">
+            <span>✓ Correct answers: <b id="final-correct-summary">0</b></span>
+            <span>✗ Incorrect answers: <b id="final-incorrect-summary">0</b></span>
+            <span>🔥 Best streak: <b id="final-best-streak">0</b></span>
+            <span>TIME: <b id="final-time">00:00</b></span>
+          </div>
+        </section>
+        <section class="breakdown-section" aria-labelledby="breakdown-title">
+          <h2 id="breakdown-title">CATEGORY BREAKDOWN</h2>
+          <div id="category-breakdown" class="category-breakdown"></div>
+        </section>
+        <section class="levels-completed" aria-labelledby="levels-completed-title">
+          <h2 id="levels-completed-title">LEVELS COMPLETED</h2>
+          <div id="completed-levels-list"></div>
+        </section>
+        <section id="badge-panel" class="badge-panel" aria-label="Achievement badge">
+          <div id="badge-icon" class="badge-icon" aria-hidden="true">🏆</div>
+          <div><p>YOUR ACHIEVEMENT</p><h2 id="badge-title">RECYCLING MATH MASTER</h2></div>
+        </section>
+        <p id="registration-status" class="registration-status" role="status" aria-live="polite">Sending your result to your teacher…</p>
+        <p class="screenshot-message"><span>📸 TAKE A SCREENSHOT OF THIS RESULT AND SUBMIT IT ON GOOGLE CLASSROOM</span><span>📸 HAZ UNA CAPTURA DE ESTE RESULTADO Y ENTRÉGALA EN GOOGLE CLASSROOM</span></p>
+      </article>
+      <div class="result-actions">
+        <button id="screenshot-button" class="primary-button" type="button">📸 PREPARE SCREENSHOT</button>
+        <button id="play-again-button" class="secondary-button" type="button">🔄 PLAY AGAIN</button>
+      </div>
+      <p class="escape-hint">Press Esc to exit screenshot view.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
