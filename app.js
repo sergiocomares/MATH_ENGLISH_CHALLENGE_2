@@ -103,8 +103,6 @@ function makeBank() {
     ["decimals","Approximate 4.267 by rounding to the nearest tenth.",["4.2","4.26","4.3","4.27"],"4.3"],
     ["decimals","Approximate 5.786 by truncation to the nearest hundredth.",["5.7","5.78","5.79","5.80"],"5.78"],
     ["decimals","In 0.363636..., which description fits the decimal?",["terminating decimal","pure recurring decimal","mixed recurring decimal","irrational number"],"pure recurring decimal"],
-    ["solids","A cube has side length 3 units. What is its volume?",["9 cubic units","18 cubic units","27 cubic units","36 cubic units"],"27 cubic units"],
-    ["solids","A cylinder has radius 2 units and height 5 units. What is its volume? Use π ≈ 3.14.",["15.7 cubic units","31.4 cubic units","62.8 cubic units","125.6 cubic units"],"62.8 cubic units"],
     ["solids","A prism has a triangular base. What is its name?",["triangular prism","quadrangular prism","pentagonal prism","hexagonal prism"],"triangular prism"],
     ["solids","Which measurement describes the distance from the centre of a circular base to its edge?",["height","generatrix","radius","vertex"],"radius"]
   ];
